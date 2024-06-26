@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Alpha Construction Company</title>
+    <title>Alupha Construction Company</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -74,7 +74,7 @@
     <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-4 text-uppercase text-white"><img src="img/nnn.png" width="200px" alt=""></h1>
+                <h1 class="m-0 display-4 text-uppercase text-white"><img src="img/ALPA.png" width="200px" alt=""></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -177,23 +177,26 @@
             </div>
             <div class="col-lg-6">
                 <div class="contact-form bg-light p-5">
-                    <div class="row g-3">
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="myForm">
+                        <div class="row g-3">
+                            <input type="hidden" name="access_key" value="77f93ff8-0ca4-4552-9391-412151d22f64">
+                            <div class="col-12 col-sm-6">
+                                <label for="inputName" class="form-label">Your Name</label>
+                                <input type="text" id="inputName" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required autocomplete="name">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label for="inputEmail" class="form-label">Your Email</label>
+                                <input type="email" id="inputEmail" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;" required autocomplete="email">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputMessage" class="form-label">Message</label>
+                                <textarea id="inputMessage" name="message" class="form-control border-0" rows="5" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Submit Request</button>
+                            </div>
                         </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control border-0" placeholder="Subject" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control border-0" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -206,7 +209,7 @@
         <div class="row g-5">
             <div class="col-lg-6 pe-lg-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 display-4 text-uppercase text-white"><img src="img/nnn.png" width="200px" alt=""></h1>
+                    <h1 class="m-0 display-4 text-uppercase text-white"><img src="img/ALPA.png" width="200px" alt=""></h1>
                 </a>
                 <!-- <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p> -->
                 <p><i class="fa fa-map-marker-alt me-2"></i>Nabbingo near Trinity College</p>
@@ -256,7 +259,7 @@
     <div class="container-fluid bg-dark bg-light-radial text-white border-top border-primary px-0">
         <div class="d-flex flex-column flex-md-row justify-content-between">
             <div class="py-4 px-5 text-center text-md-start">
-                <p class="mb-0">&copy; <a class="text-primary" href="#">ALPHA CONSTRUCTION COMPANY</a>. All Rights Reserved.</p>
+                <p class="mb-0">&copy; <a class="text-primary" href="#">ALUPHA CONSTRUCTION COMPANY</a>. All Rights Reserved.</p>
             </div>
             <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
                 <p class="mb-0">Designed by <a class="text-dark" href="">NAMALE CHRISTINE</a></p>
@@ -284,6 +287,13 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            this.submit(); // Submit the form
+            this.reset(); // Clear the form fields
+        });
+        </script>
 </body>
 
 </html>
